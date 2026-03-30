@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#003366">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="J & G Moving">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="Images/favicon-blue.png" type="image/png">
+    <!-- Stylesheets -->
     <link href="css/all.min.css" rel="stylesheet" type="text/css">
     <link href="css/animate.compat.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="Images/favicon-blue.png" type="image/png">
     <script defer src="js/scripts.js"></script>
     <title>J & G Moving | Professional Moving & Relocation Services</title>
-    <style>html, body {
-        overflow-x: hidden;
-        width: 100%;
-        }</style>
+    <style>
+        /* Prevent horizontal scrolling on mobile */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* Ensure images scale correctly on all devices */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body style="background-color: black;">
@@ -30,42 +45,40 @@
                     <a href="#"><i class="fa-brands fa-behance"></i></a>
                     <a href="#"><i class="fa-solid fa-basketball"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><img src="Images/jg-logo.png" alt="J & G Moving"></i></a>
+                    <a href="#"><img src="Images/jg-logo.png" alt="J & G Moving"></a>
                 </div>
             </div>
         </header>
         <header>
             <div class="hide" id="searchBar">
-                <input type="search" name="searchBox" id="searchBox" placeholder="Type your search here..    Press [Esc] to exist">
+                <input type="search" name="searchBox" id="searchBox" placeholder="Type your search here..    Press [Esc] to exit">
             </div>
             <div class="container">  
                 <a href="#"><img style="height: 5vh;" src="Images/jg-logo.png" alt="J & G Moving Logo"></a>
-               <!--  <h1>
+                <!-- <h1>
                     <span>J & G</span>MOVING 
                     <p>Relocation experts you can trust.</p>
-                </h1>
-                -->
+                </h1> -->
                 <label for="menu"><i class="fas fa-bars"></i></label>
                 <input type="checkbox" id="menu">
                 <nav>
                     <a href="#sec-1">About</a>
                     <a href="app.html">App</a>
-                    <a href="#sec-4">Portofolio</a>
+                    <a href="#sec-4">Portfolio</a>
                     <a href="#sec-3">Services</a>
                     <a href="contact.html">Contact</a>
-<!--                     <i class="fa-solid fa-magnifying-glass" id="search"></i> -->
                 </nav>
             </div>
         </header>
         <article>
-        <div style="min-height: 80vh;" class="container">
-            <h1>We Are Certified Moving Experts</h1>
-            <h2>Reliable Moving & Packing Services<br>
-            <span>Fast AND Dependable</span></h2>
-            <p>From local to long-distance moves, our team is dedicated to providing top-notch moving services. We take pride in delivering careful, efficient, and professional solutions for all your relocation needs. Whether moving homes or offices, we ensure your belongings arrive safely and on time. Trust us for exceptional service and care, no matter the size of the move!</p>
-            <a href="contact.html">Get Quote</a>
-            <a style="color: black; background-color: #003366;" href="app.html">Contact Now</a>
-        </div>
+            <div style="min-height: 80vh;" class="container">
+                <h1>We Are Certified Moving Experts</h1>
+                <h2>Reliable Moving & Packing Services<br>
+                <span>Fast AND Dependable</span></h2>
+                <p>From local to long-distance moves, our team is dedicated to providing top-notch moving services. We take pride in delivering careful, efficient, and professional solutions for all your relocation needs. Whether moving homes or offices, we ensure your belongings arrive safely and on time. Trust us for exceptional service and care, no matter the size of the move!</p>
+                <a href="contact.html">Get Quote</a>
+                <a style="color: black; background-color: #003366;" href="app.html">Contact Now</a>
+            </div>
         </article>
     </section>
     <section id="sec-1">
@@ -75,15 +88,15 @@
                 <h2>Reliable Moving and Relocation Services</h2>
                 <p>At J & G Moving, we offer expert solutions for all your moving needs. Whether you're relocating across town or across the country, packing up a single room or an entire office, we have the skills and experience to make your move seamless. Our team is committed to providing high-quality work and outstanding customer service every time. <br><br>Looking for fast, affordable, and dependable movers? You’ve come to the right place! We ensure all projects are completed to your satisfaction, from start to finish.</p>
                 <a href="#sec-3">Learn More About Our Services</a>
-                </article>
-                <aside><img style="padding: 12px;" src="Images/logo.png" alt="Professional movers at work"></aside>
-                </div>
-                </section>
-                <section id="sec-2">
-                    <div style="min-height: 100vh;" class="container">
-                        <h1>Why Choose Us?</h1>
-                        <p>We stand out for our reliability, attention to detail, and commitment to quality. Our team is skilled in all aspects of moving, including packing, loading, transport, and unpacking, ensuring a stress-free experience for you. From quick residential moves to comprehensive corporate relocations, we get the job done efficiently and professionally. Your satisfaction is our top priority!</p>
-                 <article>
+            </article>
+            <aside><img style="padding: 12px;" src="Images/logo.png" alt="Professional movers at work"></aside>
+        </div>
+    </section>
+    <section id="sec-2">
+        <div style="min-height: 100vh;" class="container">
+            <h1>Why Choose Us?</h1>
+            <p>We stand out for our reliability, attention to detail, and commitment to quality. Our team is skilled in all aspects of moving, including packing, loading, transport, and unpacking, ensuring a stress-free experience for you. From quick residential moves to comprehensive corporate relocations, we get the job done efficiently and professionally. Your satisfaction is our top priority!</p>
+            <article>
                 <figure>
                     <div><img src="Images/ico1.png" alt="Quality moving services"></div>
                     <div class="cont">
@@ -157,16 +170,7 @@
     <section id="sec-4">
         <div style="min-height: 100vh;" class="container">
             <h1>We Care About Your Move</h1>
-        <p>At J & G Moving, we prioritize your satisfaction and the safety of your belongings. Whether it's a local move or a long-distance relocation, we take the time to listen to your needs and ensure that every step is completed to the highest standards. Our team is dedicated to providing reliable, professional moving services that make a difference. From start to finish, we care about every detail, ensuring your transition is smooth, safe, and stress-free.</p>
-    <!--
-            <div class="filter">
-                <a href="#">Show all</a>
-                <a href="#">buildings</a>
-                <a href="#">interior design</a>
-                <a href="#">isolation</a>
-                <a href="#">plumping</a>
-            </div>
-            -->
+            <p>At J & G Moving, we prioritize your satisfaction and the safety of your belongings. Whether it's a local move or a long-distance relocation, we take the time to listen to your needs and ensure that every step is completed to the highest standards. Our team is dedicated to providing reliable, professional moving services that make a difference. From start to finish, we care about every detail, ensuring your transition is smooth, safe, and stress-free.</p>
             <div class="cont">
                 <img class="wow animated fadeIn slow" src="Images/suburbs-moving.png" alt="J & G Moving team in action">
                 <aside>
@@ -217,29 +221,10 @@
         </div>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368458426!3d40.71312937933073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316f0d9dcb%3A0x5b6b7b2f6b8f0b4!2sJ%26G%20Moving!5e0!3m2!1sen!2sus!4v1733571177608!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <!--
-        <div class="contactUs">
-            <div class="container">
-                <aside>
-                    <h1>do you have any questions?</h1>
-                    <h2>feel free to contact us!</h2>
-                </aside>
-                <form id="form" action="/" method="">
-                    <input type="text" name="name" id="" placeholder="Name" required>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <input type="text" name="message" id="" placeholder="Message" required>
-                    <input type="submit" value="submit" id="submit">
-                    <p id="msg"></p>
-                </form>
-            </div>
-        </div>
-        -->
     </section>
     <section id="sec-6">
         <div class="container">
-            <a href="#"><img style="height: 5vh;" src="Images/jg-logo.png" alt="J & G Moving logo">
-            
-            </a>
+            <a href="#"><img style="height: 5vh;" src="Images/jg-logo.png" alt="J & G Moving logo"></a>
             <div class="about">
                 <h2 style="margin-top: -12px;">
                     J & G Moving LLC 
@@ -256,53 +241,35 @@
                     <li>Vehicle & specialty transport</li>
                 </ul>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>  
                 <a href="#"><i class="fab fa-google-plus-g"></i></a>
                 <a href="#"><i class="fab fa-youtube-square"></i></a>
             </div>
-            <!--   <div class="links">
-                <h1>Explor links</h1>
-                <a href="#">Our services</a>
-                <a href="#">Meet our team</a>
-                <a href="#">Forum</a>
-                <a href="#">Help center</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Our terms</a>
-                <a href="#">Site map</a>
-            </div>
-             
-            <div class="posts">
-                <h1>Latest posts</h1>
-                <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-            </div>
-            -->
             <div class="contact">
                 <h1>Contact us</h1>
-                <p>1500 Main Street, Springfield, <RI:a></RI:a></p>
+                <p>1500 Main Street, Springfield, IL</p>
                 <p>info@JandGMoving.app</p>
                 <p>1-800-MOVE-NOW</p>
-
             </div>
         </div>
     </section>
     <section id="sec-7">
         <div class="container">
-
+            <!-- Footer content can go here -->
         </div>
-    
     </section>
-
-
-   
 
     <script src="js/wow.min.js"></script>
     <script> new WOW().init();</script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- PWA: Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => console.log('Service Worker registered:', reg))
+                .catch(err => console.error('Service Worker registration failed:', err));
+        }
+    </script>
 </body>
 </html>
