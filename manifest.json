@@ -1,0 +1,22 @@
+{
+    "name": "J & G Moving",
+    "short_name": "J & G Moving",
+    "description": "J & G Moving App",
+    "start_url": "https://somoscv.github.io/jgmoving/index.html",
+    "background_color": "#003366",
+    "theme_color": "#003366",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "Images/favicon-blue.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "images/favicon-blue.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

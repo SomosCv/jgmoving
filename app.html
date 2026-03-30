@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.compat.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script defer src="js/scripts.js"></script>
+    <title>Nailed IT</title>
+
+        <!-- Link to the manifest file -->
+        <link rel="manifest" href="manifest.json">
+
+        <!-- Meta tags for PWA -->
+        <meta name="theme-color" content="#00000">
+        <meta name="description" content="Quick links to social media platforms.">
+    
+        <!-- Link to Favicon (using favicon.png for all devices) -->
+        <link rel="icon" href="Images/favicon.png" type="image/png">
+        
+        <!-- Add other icon sizes for different devices (all pointing to favicon.png) -->
+        <link rel="apple-touch-icon" href="Images/favicon.png" sizes="180x180">
+        <link rel="icon" href="Images/favicon.png" sizes="192x192">
+        <link rel="icon" href="Images/favicon.png" sizes="512x512">
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('Images/vanbackfade.png'); /* Adjust path if necessary */
+            background-size: cover; /* Ensure the background covers the entire viewport */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+        }
+        .container {
+            background-color: #00000000;
+            width: 90%;
+            max-width: 400px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #ffffff;
+        }
+        .link-button {
+            display: block;
+            background-color: #581212be;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .link-button:hover {
+            background-color: #270000;
+            color: black;
+        }
+
+        /* Animate text: fade in and change color */
+@keyframes fadeInChangeColor {
+    0% {
+        opacity: 0;
+        color: rgba(255, 255, 255, 0.66);
+    }
+    50% {
+        opacity: 0.5;
+        color: rgba(255, 255, 255, 0.99);
+    }
+    100% {
+        opacity: 1;
+        color: rgba(255, 255, 255, 1); /* Full opacity */
+    }
+}
+
+#animateText {
+    animation: fadeInChangeColor 2s ease-in-out 4;
+}
+
+
+
+
+/* Style for the share button */
+.share-btn {
+    position: fixed;      /* Fixed positioning so it stays at the bottom-left */
+    left: 20px;           /* 20px from the left of the screen */
+    bottom: 20px;         /* 20px from the bottom of the screen */
+    width: 50px;   
+    color: #ffffff;  
+    text-decoration: none;     /* Size of the button */
+    height: 50px;         /* Size of the button */
+    background-color: #c3ff00; /* Button color (blue) */
+    border-radius: 50%;   /* Makes the button round */
+    display: flex;        /* Center content (icon) inside the button */
+    justify-content: center;
+    font-size: 11px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a more raised effect */
+    transition: background-color 0.3s ease; /* Smooth color transition when hovered */
+}
+
+.share-btn:hover {
+    background-color: #526300; /* Darker color when hovered */
+}
+
+/* Optional: styling the icon if using an image */
+.share-btn img {
+    width: 24px;  /* Adjust size of the icon */
+    height: 24px; /* Adjust size of the icon */
+}
+
+
+
+
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            justify-items: center;
+            max-width: 300px;
+            width: 100%;
+        }
+        .social-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .social-badge:hover {
+            transform: scale(1.1);
+            background-color: #45a049;
+        }
+        .social-badge img {
+            width: 24px;
+            height: 24px;
+        }
+
+
+        /* Style for the loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+}
+
+#loader img {
+    margin-top: -150px;
+    min-height: 103%;
+}
+
+        #content {
+            display: none; /* Hide the content initially */
+        }
+        
+    </style>
+
+
+</head>
+
+<body>
+    <!-- <div id="loader">
+        <img src="nailed.gif" alt="Loading...">
+    </div>
+    -->
+
+
+
+<a href="index.html">    
+    <img src="Images/naileditlogored.png" alt="" style="height: 6vh; position: fixed; top: 0; margin-top: 3vh; left: 50%; transform: translateX(-50%); z-index: 10;">   
+</a>
+    <div class="container">
+        <h1 id="animateText" style="color: rgba(255, 255, 255, 0.66);">Standing by...</h1>
+<p style="font-size: 18px; margin-top: -16px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #b7ff5ad4;">Click the <span style="color: #7a0000;">Bubble </span>to chat. </p>
+   <!-- 
+          <a style="font-size: 29px;" href="index.html" class="link-button" target="_blank">Home</a>
+    <a href="https://facebook.com" class="link-button" target="_blank">About Us</a>
+    <a href="https://instagram.com" class="link-button" target="_blank">Services</a>
+    <a href="https://twitter.com" class="link-button" target="_blank">Gallery</a>
+    <a href="https://linkedin.com" class="link-button" target="_blank">Terms</a>
+    <a style="background-color: #00180bc0; font-size: 28px;" href="https://linkedin.com" class="link-button" target="_blank">Pay Your Bill</a>
+    -->
+
+</div>
+
+<a href="#" id="shareButton" class="share-btn">
+    <img src="Images/ico3.png" alt="Share">
+</a>
+
+
+<script>
+// Detect if the 'share' feature is supported in the browser
+const shareButton = document.getElementById('shareButton');
+if (navigator.share) {
+    shareButton.addEventListener('click', () => {
+        navigator.share({
+            title: 'Check this out!',
+            text: 'Here is some text to share.',
+            url: window.location.href, // Share the current URL
+        })
+        .then(() => console.log('Share successful'))
+        .catch((error) => console.log('Share failed', error));
+    });
+} else {
+    // Fallback action for browsers that do not support the share API
+    shareButton.addEventListener('click', () => {
+        alert('Share button clicked, but the browser does not support sharing.');
+    });
+}
+
+</script>
+
+
+<script>
+
+// Function to wait for a specified time (e.g., the length of the GIF)
+window.onload = function() {
+    // Duration of the loading GIF animation in milliseconds
+    var gifDuration = 2000; // Adjust based on the length of your GIF (e.g., 3 seconds)
+
+    // Set a timer to wait for the GIF to finish playing
+    setTimeout(function() {
+        // Hide the loader and show the content after the gif has played for the specified time
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }, gifDuration);
+};
+
+</script>
+
+<script>
+    // Register the service worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js').then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+        });
+    }
+</script>
+
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6752874d2480f5b4f5a87e2d/1ied6120f';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<!--Start of Tawk.to Script
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6752874d2480f5b4f5a87e2d/1ied6120f';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>-->
+    <!--End of Tawk.to Script-->
+
+
+    <script src="js/wow.min.js"></script>
+    <script> new WOW().init();</script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
